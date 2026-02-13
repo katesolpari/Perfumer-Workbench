@@ -1,0 +1,5 @@
+{
+  "name": "Distillate",
+  "description": "An AI-powered workbench for Master Perfumers. Create scent formulations from abstract moods or images, analyze molecular structures, and map biological receptor interactions.",
+  "requestFramePermissions": []
+}
