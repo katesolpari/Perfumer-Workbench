@@ -102,7 +102,7 @@ const ScentMap: React.FC<ScentMapProps> = ({ formulation }) => {
         <h3 className="font-serif text-xl text-slate-800">Scent Topography</h3>
       </div>
       
-      <div className="flex-1 w-full min-h-[350px] p-2 relative">
+      <div className="flex-1 w-full min-h-[400px] p-2 relative">
         {/* Quadrant Background Labels - Subtle */}
         <div className="absolute inset-0 pointer-events-none p-12 opacity-30">
             <div className="w-full h-full grid grid-cols-2 grid-rows-2">
@@ -114,7 +114,7 @@ const ScentMap: React.FC<ScentMapProps> = ({ formulation }) => {
         </div>
 
         <ResponsiveContainer width="100%" height="100%">
-          <ScatterChart margin={{ top: 30, right: 30, bottom: 30, left: 30 }}>
+          <ScatterChart margin={{ top: 30, right: 30, bottom: 80, left: 40 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
             <XAxis 
                 type="number" 
@@ -123,7 +123,7 @@ const ScentMap: React.FC<ScentMapProps> = ({ formulation }) => {
                 axisLine={{ stroke: '#cbd5e1' }}
                 tick={false}
             >
-                <Label value="Volatility / Freshness" offset={0} position="bottom" style={{ fontSize: '10px', fill: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.1em' }} />
+                <Label value="Volatility / Freshness" offset={20} position="bottom" style={{ fontSize: '10px', fill: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.1em' }} />
             </XAxis>
             <YAxis 
                 type="number" 
@@ -132,7 +132,7 @@ const ScentMap: React.FC<ScentMapProps> = ({ formulation }) => {
                 axisLine={{ stroke: '#cbd5e1' }}
                 tick={false}
             >
-                <Label value="Olfactive Character" angle={-90} position="left" style={{ fontSize: '10px', fill: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.1em' }} />
+                <Label value="Olfactive Character" angle={-90} position="left" offset={20} style={{ fontSize: '10px', fill: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.1em' }} />
             </YAxis>
             <ZAxis type="number" dataKey="z" range={[50, 400]} name="Quantity" />
             <Tooltip content={<CustomTooltip />} cursor={{ strokeDasharray: '3 3' }} />

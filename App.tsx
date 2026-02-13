@@ -119,7 +119,7 @@ const App: React.FC = () => {
             </div>
 
             {/* Mini Scent Map (Mobile/Condensed view context) */}
-            <div className="flex-1 bg-white p-1 rounded-xl shadow-sm border border-slate-100 min-h-[300px]">
+            <div className="flex-1 bg-white p-1 rounded-xl shadow-sm border border-slate-100 min-h-[500px]">
                <ScentMap formulation={formulation} />
             </div>
           </div>
